@@ -4,6 +4,6 @@ using UnityEngine.UI;
 
 public class ItemButton : MonoBehaviour
     {
-        public Itemdata Data;
+        public Itemdata data;
         public Image icon;
     }

@@ -60,6 +60,8 @@ public class Gamemanager : MonoBehaviour
         else// player lose//
         {
             SceneManager.LoadScene("Mainmenu");
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }
