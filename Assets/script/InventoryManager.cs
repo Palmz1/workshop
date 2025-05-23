@@ -5,7 +5,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager instance;
 
-    void Awake()
+    private void Awake()
     {
         if (instance == null)
         {
@@ -16,16 +16,16 @@ public class InventoryManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public List<itemdata> inventoryList = new List<itemdata>();
+    public List<Itemdata> inventoryList = new List<Itemdata>();
 
-    public void AddItem(itemdata item)
+    public void AddItem(Itemdata item)
     {
         inventoryList.Add(item);
     }
-    public int GetItemAmount(itemdata data)
+    public int GetItemAmount(Itemdata data)
     {
         int amount = 0;
-        foreach (itemdata item in inventoryList)
+        foreach (Itemdata item in inventoryList)
         {
             if (item == data)
             {

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Gamemanager : MonoBehaviour
 {
   public static Gamemanager instance;
-  public void Awake()
+  private void Awake()
     {
         if (instance == null)
         {
@@ -34,7 +34,7 @@ public class Gamemanager : MonoBehaviour
         //Time.timeScale = 1f;
     }
     public float timeCounter = 30f;
-    public itemdata targetItem;
+    public Itemdata targetItem;
     public int targetAmount = 5;
     public TMP_Text timeCounterTex;
     public Image targetItemicon;
@@ -46,7 +46,8 @@ public class Gamemanager : MonoBehaviour
     }
     private void Update()
     {
-        if(timeCounter > 0)
+        targetItemicon.sprite = targetItem.itemicon;
+        if (timeCounter > 0)
         {
             timeCounter -= Time.deltaTime;
             timeCounterTex.text = timeCounter.ToString("0");

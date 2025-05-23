@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Debug.DrawRay(Camera.main.transform.position,Camera.main.transform.forward * 5f, Color.green);
-        if (Input.GetMouseButtonDown(0))//???? 
+        if (Input.GetMouseButtonDown(0))
         {
            
             if (Physics.Raycast(Camera.main.transform.position,
